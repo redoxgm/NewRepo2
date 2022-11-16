@@ -1,0 +1,54 @@
+﻿@model tpLabo4_usarEste_.Models.Celular
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Celular</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.modelo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.modelo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.foto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.foto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.marca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.marca.id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SistemaOperativo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SistemaOperativo.id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

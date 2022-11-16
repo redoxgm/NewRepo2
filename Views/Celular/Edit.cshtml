@@ -1,0 +1,59 @@
+﻿@model tpLabo4_usarEste_.Models.Celular
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Celular</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="modelo" class="control-label"></label>
+                <input asp-for="modelo" class="form-control" />
+                <span asp-validation-for="modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="precio" class="control-label"></label>
+                <input asp-for="precio" class="form-control" />
+                <span asp-validation-for="precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descripcion" class="control-label"></label>
+                <input asp-for="descripcion" class="form-control" />
+                <span asp-validation-for="descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="foto" class="control-label"></label>
+                <input asp-for="foto" class="form-control" />
+                <span asp-validation-for="foto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="marcaId" class="control-label"></label>
+                <select asp-for="marcaId" class="form-control" asp-items="ViewBag.marcaId"></select>
+                <span asp-validation-for="marcaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sistemaOperativoId" class="control-label"></label>
+                <select asp-for="sistemaOperativoId" class="form-control" asp-items="ViewBag.sistemaOperativoId"></select>
+                <span asp-validation-for="sistemaOperativoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
